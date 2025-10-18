@@ -4,10 +4,9 @@ fetch(
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
-    throw Error('I am an error!');
 
-    // document.body.style.backgroundImage = `url(${data.urls.regular})`;
-    // document.getElementById('author-name').innerText = `By: ${data.user.name}`;
+    document.body.style.backgroundImage = `url(${data.urls.regular})`;
+    document.getElementById('author-name').innerText = `By: ${data.user.name}`;
     // document.getElementById(
     //   'author-img'
     // ).innerHTML = `<img src=${data.profile_image.large})>`;
