@@ -13,7 +13,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 3px 5px 2px #474747;
   color: white;
-  padding: 24px;
 }
 
 main {
@@ -21,8 +20,15 @@ main {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  padding: 24px;
 }
 
-h1#time {
-  align-self: center;
+div.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1.time {
+  /* align-self: center; */
+  text-align: center;
 }
