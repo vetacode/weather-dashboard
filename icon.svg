@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Cloudy</title>
+  <desc>A color styled icon from Orion Icon Library.</desc>
+  <path data-name="layer2"
+  d="M62 40a12 12 0 0 0-12-12h-1.2a16 16 0 0 0-30.7 4H18a10 10 0 1 0 0 20h32.1A12 12 0 0 0 62 40z"
+  fill="#cdf0f0"></path>
+  <path data-name="layer1" d="M18.1 32a16 16 0 0 1 7.7-11.8 12 12 0 1 0-13.6 13.7A9.9 9.9 0 0 1 18 32z"
+  fill="#fc0"></path>
+  <path data-name="opacity" d="M12.2 33.9A9.9 9.9 0 0 1 18 32h.1a16 16 0 0 1 7.7-11.8 11.9 11.9 0 0 0-.6-2.2H25A16 16 0 0 0 9.1 32H7.6a11.9 11.9 0 0 0 4.6 1.7z"
+  fill="#000064" opacity=".1"></path>
+  <path data-name="opacity" d="M18 35a17 17 0 0 1 .3-2.8L18 32a10 10 0 1 0 0 20h17a17 17 0 0 1-17-17z"
+  fill="#000064" opacity=".1"></path>
+  <path data-name="opacity" d="M62 40a12 12 0 0 0-12-12h-1.2a16 16 0 0 0-12.1-9.8h-4.3a15.9 15.9 0 0 0-9.7 4.6 21.9 21.9 0 0 1 21.7 6.7l-1.1.6h.7a15 15 0 0 1 14.6 18.2A12 12 0 0 0 62 40zM47.8 28.2z"
+  fill="#fff" opacity=".5"></path>
+  <path data-name="stroke" d="M62 40a12 12 0 0 0-12-12h-1.2a16 16 0 0 0-30.7 4H18a10 10 0 1 0 0 20h32.1A12 12 0 0 0 62 40zm-49.8-6.1a12 12 0 1 1 13.7-13.7"
+  fill="none" stroke="#2e4369" stroke-linecap="round" stroke-linejoin="round"
+  stroke-width="2"></path>
+</svg>
