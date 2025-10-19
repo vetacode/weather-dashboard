@@ -94,6 +94,8 @@ navigator.geolocation.getCurrentPosition((position) => {
       console.log(data);
       const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
+      console.log(iconUrl);
+
       document.getElementById('weather').innerHTML = `
       <img src=${iconUrl} >
       <p>${Math.round(data.main.temp)}℃</>
