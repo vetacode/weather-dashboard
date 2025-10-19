@@ -1,21 +1,23 @@
-const res = await fetch(
-  'https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature'
-);
+try {
+  const res = await fetch(
+    'https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature'
+  );
 
-const data = await res.json();
-document.body.style.backgroundImage = `url(${data.urls.regular})`;
-document.getElementById('author-name').innerText = `By: ${data.user.name}`;
-
-// .catch((err) => {
-//   document.body.style.backgroundImage = `url(https://plus.unsplash.com/premium_photo-1682310096066-20c267e20605?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2112)`;
-// });
+  const data = await res.json();
+  console.log(data);
+  document.body.style.backgroundImage = `url(${data.urls.full})`;
+  document.getElementById('author-name').textContent = `By: ${data.user.name}`;
+} catch (err) {
+  document.body.style.backgroundImage = `url(https://plus.unsplash.com/premium_photo-1682310096066-20c267e20605?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2112)`;
+  document.getElementById('author-name').textContent = `By: Vetacode`;
+}
 
 const res = await fetch('https://api.coingecko.com/api/v3/coins/bitcoin');
 if (!res.ok) {
   document.body.style.backgroundImage = `url(https://media.istockphoto.com/id/670634464/id/foto/closeup-pengusaha-wanita-tangan-memegang-tanda-kartu-putih-dengan-di-bawah-konstruksi-pesan-teks.jpg?s=2048x2048&w=is&k=20&c=jfENiKwbPUi8HKPMAcsVGEuNUZ3LKgOk-Yh8E5v8sk8=)`;
   throw Error('XXX this is an Error');
 }
-return res.json();
+
 const data = await res.json();
 document.getElementById(
   'crypto-name'
@@ -74,29 +76,50 @@ setInterval(getCurrentTime, 1000);
 //   console.log(position);
 // });
 
-navigator.geolocation.getCurrentPosition((position) => {
-  fetch(
+navigator.geolocation.getCurrentPosition(async (position) => {
+  const res = await fetch(
     `https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`
-  )
-    .then((res) => {
-      if (!res.ok) {
-        throw Error('Weather data is unavailable');
-      }
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-      const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  );
+  if (!res.ok) {
+    throw Error('Weather data is unavailable');
+  }
+  const data = await res.json();
+  const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
-      console.log(iconUrl);
+  document.getElementById('weather').innerHTML = `
+  <img src=${iconUrl} >
+  <p>${Math.round(data.main.temp)}℃</>
+  `;
+  document.getElementById('city').innerHTML = `
+  <p>${data.name}</p>            
+  `;
 
-      document.getElementById('weather').innerHTML = `
-      <img src=${iconUrl} >
-      <p>${Math.round(data.main.temp)}℃</>
-      `;
-      document.getElementById('city').innerHTML = `
-      <p>${data.name}</p>            
-      `;
-    });
   // .catch((err) => console.error('There is something wrong', err));
 });
+
+// navigator.geolocation.getCurrentPosition((position) => {
+//   fetch(
+//     `https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`
+//   )
+//     .then((res) => {
+//       if (!res.ok) {
+//         throw Error('Weather data is unavailable');
+//       }
+//       return res.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//       const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+//       console.log(iconUrl);
+
+//       document.getElementById('weather').innerHTML = `
+//       <img src=${iconUrl} >
+//       <p>${Math.round(data.main.temp)}℃</>
+//       `;
+//       document.getElementById('city').innerHTML = `
+//       <p>${data.name}</p>
+//       `;
+//     })
+//     .catch((err) => console.error('There is something wrong', err));
+// });
