@@ -24,43 +24,57 @@ main {
   padding: 24px;
 }
 
-div.top {
+.top {
   display: flex;
   justify-content: space-between;
 }
 
-div#crypto-top {
+#crypto-top {
   display: flex;
   flex-direction: column;
 }
 
-div#crypto-name {
+#crypto-name {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-div#crypto-name span {
+#crypto-name span {
   font-size: 1.5rem;
 }
 
-div#crypto-price {
+#crypto-price {
   margin-top: 10px;
 }
 
-div#weather-top {
+#weather-top {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-div#weather {
+#weather {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 10px;
 }
 
-div#time {
+#weather img {
+  display: block; /*display: block removes that invisible gap caused by line-height.*/
+
+  width: 50px;
+  height: 50px;
+  transform: scale(1.8);
+  object-fit: cover;
+}
+
+#weather p {
+  font-size: 1.5rem;
+}
+
+#time {
   /* align-self: center; */
   text-align: center;
   font-size: 63px;
