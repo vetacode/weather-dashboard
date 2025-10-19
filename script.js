@@ -45,16 +45,17 @@ const dateFormat = {
   month: 'long',
   day: 'numeric',
 };
-const timeFormat = {
-  hour: '2-digit',
-  minute: '2-digit',
-  // second: '2-digit',
-};
+
+// const timeFormat = {
+//   hour: '2-digit',
+//   minute: '2-digit',
+//   second: '2-digit',
+// };
 
 document.getElementById('time').innerHTML = `
 <p>${now.toLocaleDateString('en-US', dateFormat)}
 </p>
-<p>${now.toLocaleTimeString('en-US', timeFormat)}
+<p>${now.toLocaleTimeString('en-US', { timeStyle: 'short' })}
 </p>
 
 `;
