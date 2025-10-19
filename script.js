@@ -23,15 +23,20 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
   })
   .then((data) => {
     console.log(data);
-    document.getElementById(
-      'crypto-img'
-    ).innerHTML = `<img src=${data.image.small}>`;
-    document.getElementById('crypto-name').innerText = data.name;
-    document.getElementById(
-      'crypto-price'
-    ).innerText = `Price: $${data.market_data.current_price.usd.toLocaleString(
+    document.getElementById('crypto').innerHTML = `<img src=${
+      data.image.small
+    } alt=${data.name}>
+    <span>${data.name}</span>
+    <span>Price: $${data.market_data.current_price.usd.toLocaleString(
       'en-US'
-    )}`;
+    )}</span>
+    `;
+    // document.getElementById('crypto-name').innerText = data.name;
+    // document.getElementById(
+    //   'crypto-price'
+    // ).innerText = `Price: $${data.market_data.current_price.usd.toLocaleString(
+    //   'en-US'
+    // )}`;
   })
   .catch((err) => console.error('XXX The data is unavailable', err));
 

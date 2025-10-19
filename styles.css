@@ -11,7 +11,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 1.3rem;
   text-shadow: 0px 0px 20px #aaaaaa;
   color: white;
 }
@@ -29,7 +29,7 @@ div.top {
   justify-content: space-between;
 }
 
-div.undertop {
+#crypto {
   display: flex;
   flex-direction: row;
   align-items: center;
