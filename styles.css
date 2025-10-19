@@ -65,16 +65,22 @@ main {
   /*display: block; /*display: block removes that invisible gap caused by line-height.*/
   width: 50px;
   height: 50px;
-  transform: scale(1.8);
+  transform: scale(2);
   object-fit: cover;
 }
 
 #weather p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 #time {
   /* align-self: center; */
   text-align: center;
   font-size: 63px;
+}
+
+@media (max-width: 480px) {
+  #time {
+    font-size: 30px;
+  }
 }

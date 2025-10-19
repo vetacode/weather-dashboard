@@ -96,10 +96,10 @@ navigator.geolocation.getCurrentPosition((position) => {
 
       document.getElementById('weather').innerHTML = `
       <img src=${iconUrl} >
-      <p>🌡️${Math.round(data.main.temp)} ℃</>
+      <p>${Math.round(data.main.temp)}℃</>
       `;
       document.getElementById('city').innerHTML = `
-      <p>${data.name}</p>            
+      <p>Location: ${data.name}</p>            
       `;
     })
     .catch((err) => console.error('There is something wrong', err));
