@@ -17,5 +17,8 @@ fetch(
   // ?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true
 )
   .then((res) => res.json())
-  .then((data) => console.log(data))
-  .catch((err) => console.error('The data is unavailable', err));
+  .then((data) => {
+    throw Error('XXX this is an Error');
+    console.log(data);
+  })
+  .catch((err) => console.error('XXX The data is unavailable', err));
