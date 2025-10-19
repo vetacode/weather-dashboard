@@ -108,6 +108,7 @@ main {
   border-radius: 50%;
   object-fit: cover;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 @media (max-width: 480px) {
