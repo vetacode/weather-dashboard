@@ -29,11 +29,18 @@ div.top {
   justify-content: space-between;
 }
 
-#crypto {
+div#crypto-top {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+div#crypto-name {
+  display: flex;
   align-items: center;
   gap: 10px;
+}
+div#crypto-price {
+  margin-top: 10px;
 }
 
 h1.time {
