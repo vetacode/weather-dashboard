@@ -48,9 +48,16 @@ div#crypto-price {
   margin-top: 10px;
 }
 
+div#weather-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 div#weather {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 div#time {
