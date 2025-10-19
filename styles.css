@@ -48,6 +48,10 @@ div#crypto-price {
   margin-top: 10px;
 }
 
+div#weather {
+  margin: 0px;
+}
+
 div#time {
   /* align-self: center; */
   text-align: center;
