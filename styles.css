@@ -39,6 +39,11 @@ div#crypto-name {
   align-items: center;
   gap: 10px;
 }
+
+div#crypto-name span {
+  font-size: 1.5rem;
+}
+
 div#crypto-price {
   margin-top: 10px;
 }

@@ -31,11 +31,9 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
     `;
 
     document.getElementById('crypto-price').innerHTML = `
-    <p>🎯Current: $${data.market_data.current_price.usd.toLocaleString(
-      'en-US'
-    )}</p>
-    <p>👆24h High: $${data.market_data.high_24h.usd.toLocaleString('en-US')}</p>
-    <p>👇24h Low: $${data.market_data.low_24h.usd.toLocaleString('en-US')}</p>
+    <p>🎯: $${data.market_data.current_price.usd.toLocaleString('en-US')}</p>
+    <p>👆: $${data.market_data.high_24h.usd.toLocaleString('en-US')}</p>
+    <p>👇: $${data.market_data.low_24h.usd.toLocaleString('en-US')}</p>
     `;
   })
   .catch((err) => console.error('XXX The data is unavailable', err));
