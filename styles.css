@@ -62,8 +62,7 @@ main {
 }
 
 #weather img {
-  display: block; /*display: block removes that invisible gap caused by line-height.*/
-
+  /*display: block; /*display: block removes that invisible gap caused by line-height.*/
   width: 50px;
   height: 50px;
   transform: scale(1.8);
