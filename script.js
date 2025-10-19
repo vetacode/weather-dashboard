@@ -90,7 +90,19 @@ navigator.geolocation.getCurrentPosition((position) => {
       }
       return res.json();
     })
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data);
+      const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+      document.getElementById('weather').innerHTML = `
+      <img src=${iconUrl} >
+      <p>🌡️${Math.round(data.main.temp)} ℃</>
+            
+      `;
+      document.getElementById('city').innerHTML = `
+    <p>${data.name}</p>            
+      `;
+    })
     .catch((err) => console.error('There is something wrong', err));
 });
 
