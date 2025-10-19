@@ -48,7 +48,10 @@ fetch('https://api.quotable.io/quotes/random')
 
     document.getElementById(
       'quotes-content'
-    ).textContent = `${data[0].content}`;
+    ).textContent = `"${data[0].content}"`;
+    document.getElementById(
+      'quotes-author'
+    ).textContent = `- ${data[0].author} -`;
   });
 
 function getCurrentTime() {

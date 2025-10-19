@@ -77,11 +77,18 @@ main {
 
 #quotes-content {
   text-align: center;
-  margin-bottom: 20px;
   font-size: 4rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   /* font-family: 'Courier New', Courier, monospace; */
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+#quotes-author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #time {
