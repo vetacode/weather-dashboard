@@ -38,6 +38,27 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
   })
   .catch((err) => console.error('XXX The data is unavailable', err));
 
+const now = new Date();
+const dateFormat = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  // hour: '2-digit',
+  // minute: '2-digit',
+  // second: '2-digit',
+};
+const timeFormat = {
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+};
+
+document.getElementById('time').innerHTML = `${now.toLocaleDateString(
+  'en-US',
+  dateFormat
+)}`;
+
 // ?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true
 // "https://httpstat.us/200"
 

@@ -48,7 +48,7 @@ div#crypto-price {
   margin-top: 10px;
 }
 
-h1.time {
+div#time {
   /* align-self: center; */
   text-align: center;
   font-size: 63px;
