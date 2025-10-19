@@ -76,14 +76,45 @@ setInterval(getCurrentTime, 1000);
 //   })
 //   .catch((err) => console.error(err));
 
-navigator.geolocation.getCurrentPosition().then((position) => {
+navigator.geolocation.getCurrentPosition((position) => {
   console.log(position);
 });
 
-// async function geolocation() {
-//   const position = await navigator.geolocation.getCurrentPosition();
+// navigator.geolocation.getCurrentPosition().then((position) => {
+//   fetch('https://apis.scrimba.com/openweathermap/data/2.5/weather?');
 //   console.log(position);
-// }
+// });
+
+// coords
+// :
+// GeolocationCoordinates
+// accuracy
+// :
+// 84
+// altitude
+// :
+// null
+// altitudeAccuracy
+// :
+// null
+// heading
+// :
+// null
+// latitude
+// :
+// -6.405709833333334
+// longitude
+// :
+// 106.886581
+// speed
+// :
+// null
+// [[Prototype]]
+// :
+// GeolocationCoordinates
+// timestamp
+// :
+// 1760871019029
 
 // const options = {
 //   enableHighAccuracy: true,
