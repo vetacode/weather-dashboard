@@ -107,8 +107,11 @@ main {
 #author-img {
   border-radius: 50%;
   object-fit: cover;
+  object-position: center; /* or 'center' or '50% 40%' for fine-tuning */
   overflow: hidden;
   flex-shrink: 0;
+  width: 50px;
+  height: 50px;
 }
 
 @media (max-width: 480px) {
@@ -121,8 +124,11 @@ main {
   #quotes-author {
     font-size: 1rem;
   }
-
   #author-name {
     font-size: 1rem;
+  }
+  #author-img {
+    width: 30px;
+    height: 30px;
   }
 }
