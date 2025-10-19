@@ -44,20 +44,20 @@ const dateFormat = {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
-  // hour: '2-digit',
-  // minute: '2-digit',
-  // second: '2-digit',
 };
 const timeFormat = {
   hour: '2-digit',
   minute: '2-digit',
-  second: '2-digit',
+  // second: '2-digit',
 };
 
-document.getElementById('time').innerHTML = `${now.toLocaleDateString(
-  'en-US',
-  dateFormat
-)}`;
+document.getElementById('time').innerHTML = `
+<p>${now.toLocaleDateString('en-US', dateFormat)}
+</p>
+<p>${now.toLocaleTimeString('en-US', timeFormat)}
+</p>
+
+`;
 
 // ?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true
 // "https://httpstat.us/200"
