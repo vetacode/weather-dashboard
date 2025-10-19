@@ -27,16 +27,16 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
       data.image.small
     } alt=${data.name}>
     <span>${data.name}</span>
-    <span>Price: $${data.market_data.current_price.usd.toLocaleString(
+    <span>🎯Price: $${data.market_data.current_price.usd.toLocaleString(
+      'en-US'
+    )}</span>
+    <span>👆24h High: $${data.market_data.high_24h.usd.toLocaleString(
+      'en-US'
+    )}</span>
+    <span>👇24h Low: $${data.market_data.low_24h.usd.toLocaleString(
       'en-US'
     )}</span>
     `;
-    // document.getElementById('crypto-name').innerText = data.name;
-    // document.getElementById(
-    //   'crypto-price'
-    // ).innerText = `Price: $${data.market_data.current_price.usd.toLocaleString(
-    //   'en-US'
-    // )}`;
   })
   .catch((err) => console.error('XXX The data is unavailable', err));
 
