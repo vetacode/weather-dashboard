@@ -41,6 +41,16 @@ try {
   console.error('XXX The data is unavailable', err);
 }
 
+fetch('https://api.quotable.io/quotes/random')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data[0].content);
+
+    document.getElementById(
+      'quotes-content'
+    ).textContent = `${data[0].content}`;
+  });
+
 function getCurrentTime() {
   const now = new Date();
   const dateFormat = {
