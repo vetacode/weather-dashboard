@@ -5,8 +5,8 @@
 <h1 align="center">🌤️ Weather Dashboard</h1>
 
 <p align="center">
-  <strong>A modern landing page showing real-time weather, time, and location details.</strong><br/>
-  Get live weather conditions, quotes, and Bitcoin price updates — all in one elegant dashboard.
+  <strong>A real-time weather, time, and location dashboard — now available as a Chrome Extension!</strong><br/>
+  Track weather conditions, Bitcoin prices, and inspirational quotes right from your browser or desktop.
 </p>
 
 <p align="center">
@@ -14,6 +14,7 @@
   <a href="#screenshots">Screenshots</a> •
   <a href="#technologies">Technologies</a> •
   <a href="#installation">Installation</a> •
+  <a href="#chrome-extension">Chrome Extension</a> •
   <a href="#license">License</a>
 </p>
 
@@ -21,26 +22,31 @@
 
 ## 🌎 Introduction
 
-The **Weather Dashboard** is a dynamic landing page displaying:
+The **Weather Dashboard** is a modern and interactive landing page that displays:
 
-- Current location weather via geolocation 🌤️
-- Real-time date and time ⏰
-- Daily inspirational quotes 💬
-- Live Bitcoin price updates 💰
+- Your **current location** and **live weather** 🌤️
+- The **current date and time**, updated every second ⏰
+- **Inspirational quotes** for motivation 💬
+- **Bitcoin price tracking** with live market values 💰
+- A **Chrome Extension version** that brings all these features directly into your browser new tab 🚀
 
-This project combines **API integration**, **JavaScript DOM manipulation**, and **responsive design** for a smooth, minimalistic user experience.
+Designed for simplicity, accuracy, and style — this dashboard combines APIs, geolocation, and dynamic UI updates to deliver real-time information at a glance.
 
 ---
 
 ## ✨ Features
 
-- 📍 **Auto Location Detection** using `navigator.geolocation`
-- 🌤️ **Real-Time Weather** data from OpenWeatherMap API
-- 🕒 **Dynamic Time & Date** with live updates
-- 💬 **Random Quotes API** for daily inspiration
-- 💰 **Bitcoin Price Tracker** with real-time rates
-- 📱 **Responsive UI** with clean design for all screen sizes
+- 📍 **Automatic Location Detection** using Geolocation API
+- 🌤️ **Live Weather Updates** (temperature, condition, and city)
+- 🕒 **Dynamic Time and Date** with automatic refresh
+- 💬 **Random Motivational Quotes** using public APIs
+- 💰 **Bitcoin Price Tracker** (latest market values)
 - 🌇 **Dynamic Backgrounds** based on weather/time
+- 📱 **Responsive Layout** optimized for desktop and mobile
+- ⚙️ **Chrome Extension Integration**
+  - Works as a **custom Chrome Dashboard** when opening a new tab
+  - Real-time weather, quotes, and crypto displayed directly in the browser
+  - Seamless setup with manifest configuration
 
 ---
 
@@ -50,26 +56,31 @@ This project combines **API integration**, **JavaScript DOM manipulation**, and 
   <img src="assets/weather-dashboard.png" alt="Weather Dashboard Screenshot" width="800"/>
 </p>
 
-> Example: Weather Dashboard showing live time, weather, quote, and Bitcoin data.
+<p align="center">
+  <img src="assets/weather-dashboard-chrome.png" alt="Weather Dashboard Screenshot Chrome Extension" width="800"/>
+</p>
+
+> Weather Dashboard displaying live data and background visuals.
 
 ---
 
 ## 🧠 Technologies
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,chrome,api" />
 </p>
 
 - **HTML5** – Semantic structure
 - **CSS3** – Styling and responsive layout
-- **JavaScript (ES6)** – Logic, APIs, and dynamic updates
-- **OpenWeatherMap API** – Live weather data
-- **Quotable API** – Inspirational quotes
-- **CoinDesk / Scrimba API** – Bitcoin price
+- **JavaScript (ES6)** – Logic, APIs, and UI updates
+- **OpenWeatherMap API** – Real-time weather data
+- **Quotable API** – Daily motivational quotes
+- **CoinDesk / Scrimba API** – Bitcoin price data
+- **Chrome Extensions API** – Browser integration
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation (Web Version)
 
 ```bash
 # Clone repository
@@ -78,6 +89,6 @@ git clone https://github.com/yourusername/weather-dashboard.git
 # Open the project
 cd weather-dashboard
 
-# Run in browser (no build required)
+# Run locally
 open index.html
 ```
