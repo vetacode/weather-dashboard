@@ -107,7 +107,7 @@ main {
 #author-img {
   border-radius: 50%;
   object-fit: cover;
-  object-position: center; /* or 'center' or '50% 40%' for fine-tuning */
+  object-position: center;
   overflow: hidden;
   flex-shrink: 0;
   width: 50px;
