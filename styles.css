@@ -59,7 +59,6 @@ main {
 }
 
 #weather img {
-  /*display: block; /*display: block removes that invisible gap caused by line-height.*/
   width: 50px;
   height: 50px;
   transform: scale(1.9);
@@ -79,15 +78,11 @@ main {
   text-align: center;
   font-size: 5rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  /* font-family: 'Courier New', Courier, monospace; */
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 #quotes-author {
   text-align: center;
   margin-bottom: 20px;
   font-size: 3rem;
-  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-  /* font-family: 'Courier New', Courier, monospace; */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
