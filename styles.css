@@ -111,8 +111,16 @@ main {
 
 @media (max-width: 480px) {
   #crypto-name span {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
+
+  #crypto-name {
+    width: 30px;
+    height: 30px;
+    transform: scale(0.8);
+    gap: 8px;
+  }
+
   #crypto-price {
     font-size: 1rem;
   }
