@@ -116,26 +116,32 @@ setInterval(getCurrentTime, 1000);
 //   console.log(position);
 // });
 
-navigator.geolocation.getCurrentPosition(async (position) => {
-  const res = await fetch(
-    `https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`
-  );
-  if (!res.ok) {
-    throw Error('Weather data is unavailable');
-  }
-  const data = await res.json();
-  const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+navigator.geolocation.getCurrentPosition(getMyPosition);
 
-  document.getElementById('weather').innerHTML = `
+async function getMyPosition(position) {
+  try {
+    const res = await fetch(
+      `https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`
+    );
+    if (!res.ok) {
+      throw Error('Weather data is unavailable');
+    }
+    const data = await res.json();
+    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+    document.getElementById('weather').innerHTML = `
   <img src=${iconUrl} >
   <p>${Math.round(data.main.temp)}℃</>
   `;
-  document.getElementById('city').innerHTML = `
+    document.getElementById('city').innerHTML = `
   <p>${data.name}</p>            
   `;
-
-  // .catch((err) => console.error('There is something wrong', err));
-});
+  } catch {
+    (err) => console.error('There is something wrong', err);
+  }
+}
+getMyPosition();
+setInterval(getMyPosition, 1000);
 
 // navigator.geolocation.getCurrentPosition((position) => {
 //   fetch(
