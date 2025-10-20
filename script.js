@@ -116,7 +116,9 @@ setInterval(getCurrentTime, 1000);
 //   console.log(position);
 // });
 
-navigator.geolocation.getCurrentPosition(getMyPosition);
+function updateWeather() {
+  navigator.geolocation.getCurrentPosition(getMyPosition);
+}
 
 async function getMyPosition(position) {
   try {
@@ -140,8 +142,8 @@ async function getMyPosition(position) {
     (err) => console.error('There is something wrong', err);
   }
 }
-getMyPosition();
-setInterval(getMyPosition, 1000);
+updateWeather();
+setInterval(updateWeather, 1000);
 
 // navigator.geolocation.getCurrentPosition((position) => {
 //   fetch(
