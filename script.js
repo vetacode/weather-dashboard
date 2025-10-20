@@ -63,7 +63,10 @@ function getMotivationQuote() {
 
 getMotivationQuote();
 
-setInterval(getMotivationQuote, 30000);
+window.addEventListener('DOMContentLoaded', () => {
+  getMotivationQuote();
+  setInterval(getMotivationQuote, 30000);
+});
 
 function getCurrentTime() {
   const now = new Date();
@@ -86,6 +89,8 @@ function getCurrentTime() {
 <p>${now.toLocaleTimeString('en-US', { timeStyle: 'medium' })}
 </p>`;
 }
+
+getCurrentTime();
 
 setInterval(getCurrentTime, 1000);
 
