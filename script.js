@@ -143,7 +143,7 @@ async function getMyPosition(position) {
   }
 }
 updateWeather();
-setInterval(updateWeather, 1000);
+setInterval(updateWeather, 600000);
 
 // navigator.geolocation.getCurrentPosition((position) => {
 //   fetch(
