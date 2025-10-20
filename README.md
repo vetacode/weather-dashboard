@@ -5,7 +5,7 @@
 <h1 align="center">🌤️ Weather Dashboard</h1>
 
 <p align="center">
-  <strong>A real-time weather, time, and location dashboard — now available as a Chrome Extension!</strong><br/>
+  <strong>A real-time weather, time, and location dashboard. Now available as a Chrome Extension!</strong><br/>
   Track weather conditions, Bitcoin prices, and inspirational quotes right from your browser or desktop.
 </p>
 
@@ -26,11 +26,11 @@ The **Weather Dashboard** is a modern and interactive landing page that displays
 
 - Your **current location** and **live weather** 🌤️
 - The **current date and time**, updated every second ⏰
-- **Inspirational quotes** for motivation 💬
+- **Inspirational quotes** for motivation at a Glance! 💬
 - **Bitcoin price tracking** with live market values 💰
 - A **Chrome Extension version** that brings all these features directly into your browser new tab 🚀
 
-Designed for simplicity, accuracy, and style — this dashboard combines APIs, geolocation, and dynamic UI updates to deliver real-time information at a glance.
+Designed for simplicity, accuracy, and style. This dashboard combines APIs, geolocation, and dynamic UI updates to deliver real-time information at a glance.
 
 ---
 
