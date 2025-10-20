@@ -110,11 +110,31 @@ main {
 }
 
 @media (max-width: 480px) {
+  #crypto-name span {
+    font-size: 1rem;
+  }
+  #crypto-price {
+    font-size: 1rem;
+  }
+
+  #weather img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #weather p {
+    font-size: 1.5rem;
+  }
+
+  #city {
+    font-size: 1rem;
+  }
+
   #time {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   #quotes-content {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   #quotes-author {
     font-size: 1.5rem;
