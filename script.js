@@ -98,24 +98,6 @@ getCurrentTime();
 
 setInterval(getCurrentTime, 1000);
 
-// ?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true
-// "https://httpstat.us/200"
-
-// fetch('https://httpstat.us/200')
-//   .then((res) => {
-//     console.log(res.ok);
-//     console.log(res.status);
-//     return res.json();
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((err) => console.error(err));
-
-// navigator.geolocation.getCurrentPosition((position) => {
-//   console.log(position);
-// });
-
 function updateWeather() {
   navigator.geolocation.getCurrentPosition(getMyPosition);
 }
