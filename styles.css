@@ -116,13 +116,13 @@ main {
 
 @media (max-width: 480px) {
   #time {
-    font-size: 1.5rem;
-  }
-  #quotes-content {
     font-size: 2rem;
   }
+  #quotes-content {
+    font-size: 3rem;
+  }
   #quotes-author {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   #author-name {
     font-size: 1rem;
