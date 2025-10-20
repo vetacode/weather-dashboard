@@ -19,32 +19,32 @@ try {
   ).textContent = `Failed to Load the Image, Please Refresh the Page!`;
 }
 
-try {
-  const res = await fetch('https://api.coingecko.com/api/v3/coins/bitcoin');
-  if (!res.ok) {
-    document.body.style.backgroundImage = `url(https://plus.unsplash.com/premium_photo-1682310093719-443b6fe140e8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2112)`;
-    document.getElementById(
-      'author-name'
-    ).textContent = `Failed to Load Crypto Information, Please Reload the Page!`;
-    throw Error('XXX this is an Error');
-  }
-
-  const data = await res.json();
-  document.getElementById(
-    'crypto-name'
-  ).innerHTML = `<img src=${data.image.small} alt=${data.name}>
-<span>${data.name}</span>
-
-`;
-
-  document.getElementById('crypto-price').innerHTML = `
-<p>🎯: $${data.market_data.current_price.usd.toLocaleString('en-US')}</p>
-<p>👆: $${data.market_data.high_24h.usd.toLocaleString('en-US')}</p>
-<p>👇: $${data.market_data.low_24h.usd.toLocaleString('en-US')}</p>
-`;
-} catch (err) {
-  console.error('XXX The data is unavailable', err);
+function getCryptoData() {
+  fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
+    .then((res) => {
+      if (!res.ok) {
+        document.body.style.backgroundImage = `url(https://plus.unsplash.com/premium_photo-1682310093719-443b6fe140e8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2112)`;
+        document.getElementById(
+          'author-name'
+        ).textContent = `Failed to Load Crypto Information, Please Reload the Page!`;
+        throw Error('XXX this is an Error');
+      }
+      return res.json();
+    })
+    .then((data) => {
+      document.getElementById(
+        'crypto-name'
+      ).innerHTML = `<img src=${data.image.small} alt=${data.name}> <span>${data.name}</span>`;
+      document.getElementById('crypto-price').innerHTML = `
+    <p>🎯: $${data.market_data.current_price.usd.toLocaleString('en-US')}</p>
+    <p>👆: $${data.market_data.high_24h.usd.toLocaleString('en-US')}</p>
+    <p>👇: $${data.market_data.low_24h.usd.toLocaleString('en-US')}</p>
+    `;
+    })
+    .catch((err) => console.error('XXX The data is unavailable', err));
 }
+getCryptoData();
+setInterval(getCryptoData, 60000);
 
 function getMotivationQuote() {
   fetch('https://api.quotable.io/quotes/random')
